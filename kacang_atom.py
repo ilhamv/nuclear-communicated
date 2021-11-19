@@ -27,7 +27,7 @@ energi['Dunia']     = 21027.415
 usia = {}
 usia['US']        = 78.9
 usia['Indonesia'] = 71.1
-usia['Dunia']     = 70.8
+usia['Dunia']     = 72.6
 
 for s in ['US', 'Indonesia', 'Dunia']:
     print("Kacang atom uranium untuk gaya hidup %s:"%s, 
