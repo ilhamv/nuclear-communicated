@@ -25,7 +25,7 @@ energi['US']        = 79897.151
 energi['Indonesia'] = 9146.767
 energi['Dunia']     = 21027.415
 
-# Ekspektasi usia [https://ourworldindata.org/life-expectancy]
+# Ekspektasi usia @ 2019 [https://ourworldindata.org/life-expectancy]
 usia = {}
 usia['US']        = 78.9
 usia['Indonesia'] = 71.1
@@ -59,3 +59,15 @@ print("\nDengan LWR,")
 for s in ['US', 'Indonesia', 'Dunia']:
     print("Kacang atom uranium untuk gaya hidup %s:"%s, 
           usia['%s'%s]*energi['%s'%s]/uranium['kWh/kacang']/lwr['efisiensi'])
+
+# Rerata kandungan energi batubara Indonesia
+# [https://www.bappenas.go.id/files/5415/0898/5954/Laporan_Akhir_Kajian_DMO_Batubara_Final.pdf]
+# [https://world-nuclear.org/information-library/facts-and-figures/heat-values-of-various-fuels.aspx]
+coal = {}
+#coal['kcal/kg'] = (28.48*4600 + 67.22*5600 + 7.57*6600 + 1.78*7600)/100.0
+coal['kcal/kg'] = (28.48*10 + 67.22*18 + 7.57*18 + 1.78*25)/100.0*239.006
+coal['kWh/ton']  = coal['kcal/kg']*0.00116222*1000.0
+kebutuhan_coal  = usia['Indonesia']*energi['Indonesia']/coal['kWh/ton']
+
+print('\nKebutuhan batubara untuk Indonesia {} ton'.format(kebutuhan_coal))
+# 1 Truk batubara: 30 ton
