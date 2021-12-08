@@ -52,7 +52,7 @@ lwr['BB/limbah']      = tak_terbakar/(1.0-lwr['DU/uranium'])
 
 print("\nEfisiensi LWR komersial: %s %%"%(lwr['efisiensi']*100.0))
 print("  ditinggalkan di bangunan pengayaan: %s %%"%(lwr['DU/uranium']*100.0))
-print("  tak terbakar alam reaktor: %s %%"%(tak_terbakar*100.0))
+print("  tak terbakar dalam reaktor: %s %%"%(tak_terbakar*100.0))
 print("Bahan bakar di dalam 'limbah': %s %%"%(lwr['BB/limbah']*100.0))
 
 print("\nDengan LWR,")
@@ -69,5 +69,5 @@ coal['kcal/kg'] = (28.48*10 + 67.22*18 + 7.57*18 + 1.78*25)/100.0*239.006
 coal['kWh/ton']  = coal['kcal/kg']*0.00116222*1000.0
 kebutuhan_coal  = usia['Indonesia']*energi['Indonesia']/coal['kWh/ton']
 
-print('\nKebutuhan batubara untuk Indonesia {} ton'.format(kebutuhan_coal))
-# 1 Truk batubara: 30 ton
+print('\nBatubara untuk gaya hidup Indonesia {} ton'.format(kebutuhan_coal))
+print('  atau %.2f truk tambang penuh'%(kebutuhan_coal/30))
