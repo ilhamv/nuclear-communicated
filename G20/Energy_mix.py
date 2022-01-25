@@ -69,11 +69,11 @@ plt.show()
 
 dat = [hydro, nuclear, solar, wind, otherRE]
 labels = keys[3:-1]+['Other RE']
-colors = ['paleturquoise','mediumorchid','yellow','azure','yellowgreen']
+colors = ['paleturquoise','greenyellow','yellow','azure','peachpuff']
 _,_,txt = plt.pie(dat, labels=labels, colors=colors, autopct="%.1f%%",wedgeprops = {"edgecolor" : "black",
                       'linewidth': 0.5,
                       'antialiased': True})
-plt.title('Non-Fossil Energy consumption of G20 members')
+plt.title('Non-Fossil Energy Consumption of G20 Members')
 plt.savefig('G20_energyNF.svg',dpi=1200,bbox_inches='tight')
 plt.savefig('G20_energyNF.png',dpi=1200,bbox_inches='tight')
 plt.show()
