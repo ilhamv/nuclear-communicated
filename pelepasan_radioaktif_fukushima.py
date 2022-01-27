@@ -19,4 +19,8 @@ volume = massa/densitas  # ml
 
 # Sendok makan (15 ml)
 sendok_makan = volume/15
-print(sendok_makan)
+print("940 PBq ekivalen I-131\nyang terlepas ke atmosfer\ndari kecelakaan Fukushima\nsetara dengan:")
+print("  %.2f mol"%mol)
+print("  %.2f gram"%massa)
+print("  %.2f ml"%volume)
+print("  %.2f sendok makan"%sendok_makan)
